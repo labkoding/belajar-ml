@@ -17,3 +17,12 @@
     5. ketik: code . (aplikasi vscode akan terbuka)
     6. buka terminal dari dalam vscode
     7. ketik py atau python lalu enter
+### upload hasil kerjaan
+    1. buka terminal/cmd
+    2. ketik: cd belajar-ml (untuk masuk ke foler belajar-ml)
+    3. ketik: git add *
+    4. ketik: git commit -am "hanya print hello world"
+    5. ketik: git push origin master
+
+### pertemuan tanggal 13 september 2022
+ contoh
