@@ -2,8 +2,7 @@ from flask import Flask
 from flask import jsonify
 
 app = Flask(__name__)
-@app.route("/valdo/index")
+@app.route('/jordy/index')
 def index():
-
-    message= "Hayoloh!"
+    message = "hello world"
     return jsonify ({'message': message})
