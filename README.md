@@ -24,5 +24,16 @@
     4. ketik: git commit -am "hanya print hello world"
     5. ketik: git push origin master
 
-### pertemuan tanggal 13 september 2022
- contoh
+### steps to run flask app
+    ```bash
+        flask --app filename.py run
+    ```
+### spesifikasi api index
+    1. method: GET
+    2. url: /nama/index
+    3. response: json
+    4. response body:
+        {
+            "message": "hello world"
+        }
+
