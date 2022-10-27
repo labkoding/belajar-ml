@@ -16,8 +16,8 @@ def api_hello_world():
         'age': age,
         })
 
-@app.route('/nofrets/absensi')
-def api_user():
+@app.route('/api/absensi')
+def api_absensi():
     # logic absensi
     # Load the model
     model = load_model('keras_model.h5')
@@ -27,7 +27,7 @@ def api_user():
     # determined by the first position in the shape tuple, in this case 1.
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
     # Replace this with the path to your image
-    image = Image.open('agung.png').convert('RGB')
+    image = Image.open('nofrets.png').convert('RGB')
     #resize the image to a 224x224 with the same strategy as in TM2:
     #resizing the image to be at least 224x224 and then cropping from the center
     size = (224, 224)
@@ -48,16 +48,17 @@ def api_user():
     class_name = class_names[index]
     confidence_score = prediction[0][index]
 
+    # simpan ke database absensi
 
 
     # output
     id = "123456789"
-    siap = class_name
+    siapa = class_name
 
     # save data absen
 
 
     return jsonify({
-        'id': id,
-        'siap': siap
+        'status': 'success',
+        'user': siapa
         })
