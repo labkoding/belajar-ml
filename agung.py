@@ -13,4 +13,4 @@ print(df.head(5))
 
 print(sns.boxplot(x=df['Price']))
 
-df.to_csv('agung.csv', index=False)
+df.to_csv('agung.csv', index=False) 
