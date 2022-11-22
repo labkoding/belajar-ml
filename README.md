@@ -37,3 +37,19 @@
             "message": "hello world"
         }
 
+### fixing chatbot
+https://stackoverflow.com/questions/66087475/chatterbot-error-oserror-e941-cant-find-model-en
+
+### env chatbot
+    pip3.7 install ChatterBot
+    pip3.7 install spacy
+    python3.7 -m spacy download en_core_web_sm
+    edit file /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/chatterbot/chatterbot.py
+    replace line ke 13:
+    spacy.load(self.language.ISO_639_1.lower())
+    dengan:
+    if self.language.ISO_639_1.lower() == 'en':
+        self.nlp = spacy.load('en_core_web_sm')
+    else:
+        self.nlp = spacy.load(self.language.ISO_639_1.lower())
+
