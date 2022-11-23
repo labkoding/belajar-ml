@@ -8,7 +8,7 @@ from ChatbotService import ChatbotService
 chatbot = ChatbotService()
 app = Flask(__name__)
 
-@app.route("/api/nofrets/sendmessage")
+@app.route("/api/nofretst/sendmessage")
 def sendMessage():
     content = request.json
     messageReturn = chatbot.sendMessage(content["sendMessage"])
