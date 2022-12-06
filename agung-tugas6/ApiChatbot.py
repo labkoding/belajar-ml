@@ -8,7 +8,7 @@ from ChatbotService import ChatbotService
 chatbot = ChatbotService()
 app = Flask(__name__)
 
-@app.route("/api/nofretst/sendmessage")
+@app.route("/api/agung/sendmessage")
 def sendMessage():
     content = request.json
     messageReturn = chatbot.sendMessage(content["sendMessage"])
@@ -17,15 +17,3 @@ def sendMessage():
         'returnMessage': str(messageReturn),
         'sendMessage': content["sendMessage"]
         })
-@app.route("/api/nofrets/receivemessage", methods=['GET', 'POST'])
-def receiveMessage():
-    content = request.json
-    if content is not None:
-        print(content)
-    # res.send(req.query['hub.challenge']);
-    # user = request.args.get('user')
-    # return jsonify ({
-    #     'status': 'OK'
-    #     })
-    # return request.args.get('hub.challenge')
-    return "ok"
