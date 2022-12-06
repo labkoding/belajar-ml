@@ -8,8 +8,7 @@
     2. install python 3
         pastikan python sudah terinstall:
         1. buka CMD
-        2. python -v
-### steps kolaborasi:
+        2. python -vqu
     1. fork repository
     2. buka terminal atau cmd
     3. ketik: git clone https://github.com/labkoding/belajar-ml.git
@@ -27,6 +26,7 @@
 ### steps to run flask app
     ```bash
         flask --app filename.py run
+        python3.7 -m flask --app nofrets/chatbot/ApiChatbot.py run --host=0.0.0.0 --port=8011
     ```
 ### spesifikasi api index
     1. method: GET
