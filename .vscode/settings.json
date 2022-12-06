@@ -3,7 +3,4 @@
         "master"
     ],
     "python.analysis.typeCheckingMode": "off",
-    "python.analysis.extraPaths": [
-        "./nofrets/chatbot"
-    ]
 }
