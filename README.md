@@ -27,6 +27,7 @@
 ### steps to run flask app
     ```bash
         flask --app filename.py run
+        python3.7 -m flask --app nofrets/chatbot/ApiChatbot.py run --host=0.0.0.0 --port=8011
     ```
 ### spesifikasi api index
     1. method: GET

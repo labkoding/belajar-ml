@@ -17,3 +17,15 @@ def sendMessage():
         'returnMessage': str(messageReturn),
         'sendMessage': content["sendMessage"]
         })
+@app.route("/api/nofrets/receivemessage", methods=['GET', 'POST'])
+def receiveMessage():
+    content = request.json
+    if content is not None:
+        print(content)
+    # res.send(req.query['hub.challenge']);
+    # user = request.args.get('user')
+    # return jsonify ({
+    #     'status': 'OK'
+    #     })
+    # return request.args.get('hub.challenge')
+    return "ok"
