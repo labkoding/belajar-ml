@@ -2,7 +2,5 @@
     "githubPullRequests.ignoredPullRequestBranches": [
         "master"
     ],
-    "python.analysis.extraPaths": [
-        "./nofrets/chatbot"
-    ]
+    "python.analysis.typeCheckingMode": "off"
 }
