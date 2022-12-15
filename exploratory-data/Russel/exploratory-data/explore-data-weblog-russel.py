@@ -2,7 +2,7 @@ daftarIpArray = []
 countLogin = 0
 countLogout = 0
 loginUrlPerIP = {}
-with open('weblog.csv', "r") as f:
+with open("C:/Users/Asus/belajar-ml/exploratory-data/nofrets/weblog.csv", "r") as f:
     for line in f:
         # count string in line
         if '/login.php' in line:
@@ -22,5 +22,5 @@ loginUrlPerIP = {"10.128.2.1": 5}
 
 print(daftarIpArray)
 print(countLogin)
-print(loginUrlPerIP)
 print(countLogout)
+print(loginUrlPerIP)

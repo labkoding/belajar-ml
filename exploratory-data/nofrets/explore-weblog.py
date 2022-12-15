@@ -1,7 +1,7 @@
 daftarIpArray = []
 countLogin = 0
 loginUrlPerIP = {}
-with open('weblog.csv', "r") as f:
+with open("C:/Users/Asus/belajar-ml/exploratory-data/nofrets/weblog.csv") as f:
     for line in f:
         # count string in line
         if '/login.php' in line:
