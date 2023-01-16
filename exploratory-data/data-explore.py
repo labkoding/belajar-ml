@@ -1,7 +1,4 @@
 # 1. Importing the required libraries for EDA
-
-
-
 import pandas as pd
 import numpy as np
 import seaborn as sns                       #visualisation
