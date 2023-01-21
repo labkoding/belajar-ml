@@ -16,9 +16,12 @@ with open("C:/Users/Asus/belajar-ml/exploratory-data/nofrets/weblog.csv", "r") a
             # append if not exist
             if hasilSplit[0] not in daftarIpArray:
                 daftarIpArray.append(hasilSplit[0])
-        
+    
+
 # contoh hasil akhir untuk variable loginUrlPerIP
-loginUrlPerIP = {"10.128.2.1": 5}
+        if'10.128.2.1' in line:
+            loginUrlPerIP = line.count('10.128.2.1')
+loginUrlPerIP = {"10.128.2.1": loginUrlPerIP}
 
 print(daftarIpArray)
 print(countLogin)
