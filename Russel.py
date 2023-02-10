@@ -1,29 +1,16 @@
-from flask import Flask
-from flask import jsonify
+from operator import index
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-app = Flask(__name__)
-@app.route('/russel/hello-world')
-def api_hello_world():
-    first_name = "Russel"
-    last_name = "Pangkey"
-    age = 17
-    return jsonify({
-        'first_name': first_name,
-        'last_name': last_name,
-        'age': age,
-        })
+df = pd.read_csv("data.csv")
 
-@app.route('/russel/user')
-def api_user():
-    id = "123456789"
-    first_name = "Russel"
-    last_name = "Pangkey"
-    age = 17
-    email = "Russelpangkey77@gmail.com"
-    return jsonify({
-        'id': id,
-        'first_name': first_name,
-        'last_name': last_name,
-        'age': age,
-        'email': email,
-        })
+df = df.rename(columns={"Engine HP": "HP", "Engine Cylinders": "Cylinders", "Transmission Type": "Transmission", "Driven_Wheels": "Drive Mode","highway MPG": "MPG-H", "city mpg": "MPG-C", "MSRP": "Price" })
+
+df = df.drop_duplicates()
+print(df.head(5))
+
+print(sns.boxplot(x=df['Price']))
+
+df.to_csv('Russel.csv', index=False)
